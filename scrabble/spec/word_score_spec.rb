@@ -14,5 +14,17 @@ describe '#word_score' do
     it 'with one 4 point letter' do
       expect(word_score(%w[F H V W Y].sample)).to eq 4
     end
+    it 'with one 5 point letter' do
+      expect(word_score('K')).to eq 5
+    end
+    it 'with one 8 point letter' do
+      expect(word_score(%w[J X].sample)).to eq 8
+    end
+    it 'with one 4 point letter' do
+      expect(word_score(%w[Q Z].sample)).to eq 10
+    end
+    it 'with two letters' do
+      expect(word_score('AA')).to eq 2
+    end
   end
 end
