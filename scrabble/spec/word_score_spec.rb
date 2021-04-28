@@ -8,5 +8,8 @@ describe '#word_score' do
     it 'with one 2 point letter' do
       expect(word_score(%w[D G].sample)).to eq 2
     end
+    it 'with one 3 point letter' do
+      expect(word_score(%w[B C M P].sample)).to eq 3
+    end
   end
 end
