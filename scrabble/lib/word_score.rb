@@ -1,7 +1,3 @@
 def word_score(word)
-  if word == 'D' || word == 'G'
-    2
-  else
-    1
-  end
+  (word == 'D' || word == 'G') ? 2 : 1
 end
