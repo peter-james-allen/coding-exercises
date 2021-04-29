@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'word_score'
 
 describe '#word_score' do
@@ -24,7 +26,10 @@ describe '#word_score' do
       expect(word_score(%w[Q Z].sample)).to eq 10
     end
     it 'with two letters' do
-      expect(word_score('AA')).to eq 2
+      expect(word_score('ZA')).to eq 11
+    end
+    it 'with multiple letters' do
+      expect(word_score('GUARDIAN')).to eq 10
     end
   end
 end
