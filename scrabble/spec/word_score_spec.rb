@@ -33,3 +33,9 @@ describe '#word_score' do
     end
   end
 end
+
+describe '#random_letter' do
+    it 'should return a random capital letter' do
+      1000.times { expect(('A'..'Z')).to include random_letter }
+    end
+end
